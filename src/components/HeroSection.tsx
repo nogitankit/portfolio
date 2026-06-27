@@ -1,7 +1,8 @@
 "use client";
 import { Terminal } from "@/components/ui/terminal";
+import { AsciiArt } from "@/components/ui/ascii-art";
 import React from "react";
-import { AsteriskIcon, ArrowUpRightIcon, GithubIcon } from "./icons";
+import { AsteriskIcon, ArrowUpRightIcon, GithubIcon, RedDot  } from "./icons";
 
 export default function HeroSection() {
   return (
@@ -35,25 +36,22 @@ export default function HeroSection() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                 </span>
+                <span><RedDot /></span>
                 <span className="text-accent font-medium">ONLINE</span>
               </span>
             </div>
 
             {/* Avatar image */}
-
-            <Terminal
-              commands={[
-                "uname -srm",
-                "docker ps --format '{{.Names}}'",
-                "echo 'System operational. Awaiting input...'",
-              ]}
-              outputs={{
-                0: ["Linux 6.x.x-arch1-1 x86_64"],
-                1: ["koshflow-prod\nhostel-havoc-db\ncloudflare-tunnel"],
-                2: ["System operational. Awaiting input..."],
-              }}
-              typingSpeed={45}
-              delayBetweenCommands={1000}
+            <AsciiArt
+              src="/assets/okay.png"
+              resolution={80}
+              charset="standard"
+              color="#f97316"
+              inverted
+              animated={true}
+              animationStyle="typewriter"
+              animationDuration={1}
+              className="mx-auto aspect-square w-full max-w-lg bg-neutral-950"
             />
 
             {/* Metadata grid */}
