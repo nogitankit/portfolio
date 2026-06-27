@@ -22,18 +22,21 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "eqox_ — Developer",
+  title: "Ankit Sharma (mayo_) — Full-Stack Developer",
   description:
-    "Portafolio de eqox_: bots de Discord, plataformas web RP y sistemas avanzados conectados vía API.",
-  authors: [{ name: "eqox_" }],
+    "Portfolio of Ankit Sharma (mayo_): Specializing in Next.js, Node.js, and full-stack applications.",
+  authors: [{ name: "Ankit Sharma", url: "https://github.com/nogitankit" }],
   openGraph: {
-    title: "eqox_ — Desarrollador Full Stack",
+    title: "Ankit Sharma — Full-Stack Engineer",
     description:
-      "Bots de Discord, plataformas RP y sistemas integrados vía API.",
+      "Building robust full-stack web platforms, secure database architectures, and automated infrastructure using Docker.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Ankit Sharma (mayo_) — Full-Stack Developer",
+    description:
+      "Full-stack engineer building scalable web applications and automated infrastructure.",
   },
   icons: {
     icon: "/favicon.png",

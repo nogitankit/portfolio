@@ -13,7 +13,7 @@ export default function ContactSection() {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText("eqox_");
+      await navigator.clipboard.writeText("mayo.js");
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -61,7 +61,7 @@ export default function ContactSection() {
                 <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
                   DISCORD
                 </p>
-                <p className="text-xl font-bold">eqox_</p>
+                <p className="text-xl font-bold">mayo.js</p>
               </div>
             </div>
 
