@@ -1,8 +1,9 @@
 "use client";
 import { Terminal } from "@/components/ui/terminal";
 import { AsciiArt } from "@/components/ui/ascii-art";
+import SideRays from "@/components/ui/side-rays";
 import React from "react";
-import { AsteriskIcon, ArrowUpRightIcon, GithubIcon, RedDot  } from "./icons";
+import { AsteriskIcon, ArrowUpRightIcon, GithubIcon, PingDot } from "./icons";
 
 export default function HeroSection() {
   return (
@@ -14,29 +15,43 @@ export default function HeroSection() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-40 -right-32 w-[500px] h-[500px] rounded-full bg-primary/15 blur-[140px] blob-drift opacity-60" />
         <div className="absolute -bottom-12 -left-20 w-[450px] h-[450px] rounded-full bg-accent/15 blur-[140px] blob-drift-slow opacity-60" />
+
+        {/* SideRays background effect */}
+        <div className="absolute inset-0 w-full h-full opacity-35">
+          <SideRays
+            speed={2.6}
+            rayColor1="#ff4800"
+            rayColor2="#afb766"
+            intensity={2.2}
+            spread={2}
+            origin="top-left"
+            tilt={39}
+            saturation={1.5}
+            blend={0.75}
+            falloff={1.6}
+            opacity={1.0}
+          />
+        </div>
       </div>
 
       <div className="relative max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left: Avatar Card */}
         <div className="relative reveal">
-          {/* Floating asterisk */}
-          <div className="absolute -top-3 -right-3 z-10">
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center spin-slow">
-              <AsteriskIcon className="w-4 h-4 text-primary-foreground" />
-            </div>
-          </div>
-
           {/* Card */}
-          <div className="relative bg-card border-2 border-foreground shadow-hard p-5 max-w-md">
+          <div className="relative bg-card border-2 border-foreground shadow-hard p-5 max-w-md hover-lift">
+            {/* Floating asterisk */}
+            <div className="absolute -top-3 -right-3 z-10">
+              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center spin-slow">
+                <AsteriskIcon className="w-4 h-4 text-primary-foreground" />
+              </div>
+            </div>
             {/* Card header */}
             <div className="flex items-center justify-between mb-4 font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
-              <span>ID · 2025</span>
+              <span>ID · 2026</span>
               <span className="flex items-center gap-1.5">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                <span>
+                  <PingDot />
                 </span>
-                <span><RedDot /></span>
                 <span className="text-accent font-medium">ONLINE</span>
               </span>
             </div>
@@ -44,14 +59,15 @@ export default function HeroSection() {
             {/* Avatar image */}
             <AsciiArt
               src="/assets/okay.png"
-              resolution={80}
+              resolution={75}
               charset="standard"
               color="#f97316"
               inverted
-              animated={true}
-              animationStyle="typewriter"
-              animationDuration={1}
-              className="mx-auto aspect-square w-full max-w-lg bg-neutral-950"
+              animated={false}
+              className="
+              mx-auto aspect-square w-full max-w-sm bg-neutral-950 -rotate-3
+              animate-float 
+              "
             />
 
             {/* Metadata grid */}
@@ -79,8 +95,8 @@ export default function HeroSection() {
         {/* Right: Hero Text */}
         <div className="reveal">
           {/* Label */}
-          <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground mb-4 flex items-center gap-2">
-            <span className="w-8 h-[1px] bg-muted-foreground inline-block" />
+          <p className="mb-4 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
+            <span className="w-24 h-px bg-white/30" />
             PORTFOLIO · VOL. 01
           </p>
 
@@ -88,7 +104,7 @@ export default function HeroSection() {
           <h1 className="text-5xl sm:text-7xl font-bold leading-[0.95] tracking-tight mb-10">
             Builder
             <br />
-            <span className="font-display text-primary text-5xl sm:text-7xl">
+            <span className="font-display text-primary text-5xl sm:text-7xl ">
               of
             </span>{" "}
             <span className="text-stroke">systems</span>

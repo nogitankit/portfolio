@@ -23,16 +23,27 @@ export function AsteriskIcon({ className = "", ...props }: React.SVGProps<SVGSVG
   );
 }
 
-export function RedDot(){
+export function PingDot(){
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-    >
-      <circle cx="6" cy="6" r="5" fill="#ff3b30" />
-    </svg>
+    <div className="relative h-4 w-4">
+      {/* Ping */}
+      <svg
+        className="absolute inset-0 h-4 w-4 animate-ping text-red-500 opacity-75"
+        viewBox="-2 0 16 16"
+        fill="currentColor"
+      >
+        <circle cx="8" cy="8" r="5" />
+      </svg>
+
+      {/* Solid dot */}
+      <svg
+        className="relative h-4 w-4 text-red-500"
+        viewBox="-3 -0.5 16 16"
+        fill="currentColor"
+      >
+        <circle cx="8" cy="8" r="5" />
+      </svg>
+    </div>
   );
 }
 

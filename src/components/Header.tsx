@@ -22,7 +22,7 @@ export default function Header() {
     >
       {/* Logo */}
       <a href="#top" className="flex items-center gap-2 group">
-        <AsteriskIcon className="w-5 h-5 text-primary transition-transform duration-500 group-hover:rotate-[180deg]" />
+        <AsteriskIcon className="w-5 h-5 text-primary transition-transform duration-500 group-hover:rotate-180" />
         <span className="font-mono text-sm font-bold tracking-wider">
           mayo{" "}
           <span className="text-primary cursor-blink">_</span>
