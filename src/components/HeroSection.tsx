@@ -3,13 +3,13 @@ import { Terminal } from "@/components/ui/terminal";
 import { AsciiArt } from "@/components/ui/ascii-art";
 import SideRays from "@/components/ui/side-rays";
 import React from "react";
-import { AsteriskIcon, ArrowUpRightIcon, GithubIcon, PingDot } from "./icons";
+import { AsteriskIcon, ArrowUpRightIcon, GithubIcon, PingDot, LinkedinIcon, MailIcon } from "./icons";
 
 export default function HeroSection() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-8 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-8 overflow-hidden grid-paper"
     >
       {/* Background gradient blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -122,7 +122,7 @@ export default function HeroSection() {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap items-center gap-4">
             <a
               href="#work"
               className="magnetic inline-flex items-center gap-2 bg-foreground text-background font-mono text-[11px] uppercase tracking-[0.25em] px-6 py-3 border-2 border-foreground transition-all duration-300 hover:bg-primary hover:border-primary hover:text-primary-foreground"
@@ -138,6 +138,22 @@ export default function HeroSection() {
             >
               <GithubIcon className="w-4 h-4" />
               GITHUB
+            </a>
+            <a
+              href="https://linkedin.com/in/notankitsharma"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="magnetic inline-flex items-center justify-center w-11 h-11 rounded-full border-2 border-foreground bg-transparent text-foreground transition-all duration-300 hover:bg-foreground hover:text-background"
+              aria-label="LinkedIn"
+            >
+              <LinkedinIcon className="w-5 h-5" />
+            </a>
+            <a
+              href="mailto:mail@m4yo.dev"
+              className="magnetic inline-flex items-center justify-center w-11 h-11 rounded-full border-2 border-foreground bg-transparent text-foreground transition-all duration-300 hover:bg-foreground hover:text-background"
+              aria-label="Email"
+            >
+              <MailIcon className="w-5 h-5" />
             </a>
           </div>
         </div>

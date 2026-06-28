@@ -20,8 +20,8 @@
 @theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
   --font-heading: var(--font-sans);
   --color-sidebar-ring: hsl(var(--sidebar-ring));
   --color-sidebar-border: hsl(var(--sidebar-border));
@@ -109,7 +109,7 @@ html {
 
 body {
   background-color: hsl(var(--background));
-  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
   color: hsl(var(--foreground));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -142,7 +142,7 @@ body {
 
 /* ===== Font-display (Instrument Serif italic) ===== */
 .font-display {
-  font-family: var(--font-instrument-serif), "Space Grotesk", serif;
+  font-family: var(--font-instrument-serif), var(--font-space-grotesk), serif;
   font-style: italic;
 }
 
@@ -309,14 +309,14 @@ body {
 .hl-cards .hl-card.green { background-color: #21c45d; }
 
 .hl-cards .hl-card .tip {
-  font-family: "Space Grotesk", ui-sans-serif, sans-serif;
+  font-family: var(--font-space-grotesk), ui-sans-serif, sans-serif;
   font-size: 1.05em;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
 
 .hl-cards .hl-card .second-text {
-  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
   font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -339,7 +339,7 @@ body {
   border: 0.1em solid hsl(var(--border));
   background-color: #121216;
   color: hsl(var(--primary));
-  font-family: "JetBrains Mono", "Courier New", monospace;
+  font-family: var(--font-jetbrains-mono), "Courier New", monospace;
   font-size: 1em;
   padding: 1.5em 1em;
   width: 14em;

@@ -1,4 +1,5 @@
 import React from "react";
+import ShinyText from "./ShinyText";
 
 export default function AboutSection() {
   return (
@@ -16,7 +17,21 @@ export default function AboutSection() {
 
           {/* Heading */}
           <h2 className="text-4xl sm:text-5xl font-bold leading-[0.95] tracking-tight mb-10">
-            Hello, I&apos;m <span className="font-display text-primary">Ankit</span>
+            Hello, I&apos;m{" "}
+            <span className="font-display text-primary">
+              <ShinyText
+                text="Ankit"
+                speed={1.8}
+                delay={0}
+                color="#fc5927"
+                shineColor="#bf2fbe"
+                spread={60}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+              />
+            </span>
             <span className="text-primary">.</span>
           </h2>
 
@@ -53,7 +68,7 @@ export default function AboutSection() {
         <div className="reveal flex flex-col justify-center">
           <p className="text-lg leading-relaxed mb-4">
             I am a full-stack developer obsessed with building complex{" "}
-            <strong>digital ecosystems.</strong> I don&apos;t just build apps—I
+            <strong>digital ecosystems. </strong> I don&apos;t just build apps—I
             design infrastructures that feel real.
           </p>
           <p className="text-lg leading-relaxed mb-8">
