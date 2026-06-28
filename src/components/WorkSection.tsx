@@ -15,9 +15,9 @@ const CATEGORIES = [
     color: "green" as const,
   },
   {
-    label: "AI Applications",
-    sub: "REACT · GEMINI API",
-    color: "orange" as const,
+    label: "Systems Programming",
+    sub: "C++ · LINUX · WEBSOCKETS",
+    color: "red" as const,
   },
 ];
 const PROJECTS = [
@@ -43,12 +43,21 @@ const PROJECTS = [
   },
   {
     number: "03",
-    title: "ChefAI",
-    type: "AI APPLICATION · LLM INTEGRATION",
-    year: "2025",
+    title: "SysWatch",
+    type: "SYSTEMS PROGRAMMING · FULL-STACK OBSERVABILITY",
+    year: "2026",
     description:
-      "A smart recipe generator that utilizes LLMs to process user ingredients. Implements asynchronous API handling to manage inference latency smoothly and features automated deployment with full custom domain DNS/SSL configurations.",
-    tags: ["React.js", "Gemini API", "Cloudflare", "Asynchronous API"],
+      "A self-hosted Linux observability platform that streams real-time hardware and system telemetry from a custom C++ daemon to a React dashboard via WebSockets. Features secure remote access, historical metrics, and automated alerts for critical system events.",
+    tags: [
+      "C++",
+      "Linux",
+      "Node.js",
+      "React",
+      "WebSockets",
+      "Docker",
+      "Cloudflare",
+      "n8n",
+    ],
     icon: "cpu" as const,
   },
 ];
@@ -82,7 +91,7 @@ export default function WorkSection() {
         </div>
 
         {/* Category cards */}
-        <div className="hl-cards sm:!flex-row sm:!grid sm:!grid-cols-3 mb-12 reveal">
+        <div className="hl-cards sm:flex-row! sm:grid! sm:grid-cols-3! mb-12 reveal">
           {CATEGORIES.map((cat) => (
             <div key={cat.label} className={`hl-card ${cat.color}`}>
               <span className="tip">{cat.label}</span>
